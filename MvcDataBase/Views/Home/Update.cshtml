@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+原纪录为：<br />
+ID:@ViewBag.item.id <br />
+列1：@ViewBag.item.column1<br />
+列2：@ViewBag.item.column2<br />
+
+<h6>修改为：</h6>
+<form id="AddRecord" action="/Home/Update" method="post">
+    列1:<input id="column1" name="column1" type="text" />
+    列2:<input id="column2" name="column2" type="text" />
+    <input name="id" hidden="hidden" value="@ViewBag.item.id" />
+    <input type="submit" value="提交" />
+
+</form>
